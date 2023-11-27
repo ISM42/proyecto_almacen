@@ -47,7 +47,7 @@ class ComprasTbController extends Controller
 
         $comprasTb = ComprasTb::create($request->all());
 
-        return redirect()->route('compras-tbs.index')
+        return redirect()->route('compras-tb.index')
             ->with('success', 'ComprasTb created successfully.');
     }
 
@@ -90,7 +90,7 @@ class ComprasTbController extends Controller
 
         $comprasTb->update($request->all());
 
-        return redirect()->route('compras-tbs.index')
+        return redirect()->route('compras-tb.index')
             ->with('success', 'ComprasTb updated successfully');
     }
 

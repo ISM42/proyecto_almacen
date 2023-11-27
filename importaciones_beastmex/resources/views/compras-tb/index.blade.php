@@ -17,7 +17,7 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('compras-tbs.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('compras-tb.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
                               </div>
@@ -53,9 +53,9 @@
 											<td>{{ $comprasTb->cantidad }}</td>
 
                                             <td>
-                                                <form action="{{ route('compras-tbs.destroy',$comprasTb->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('compras-tbs.show',$comprasTb->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('compras-tbs.edit',$comprasTb->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                <form action="{{ route('compras-tb.destroy',$comprasTb->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('compras-tb.show',$comprasTb->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('compras-tb.edit',$comprasTb->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
