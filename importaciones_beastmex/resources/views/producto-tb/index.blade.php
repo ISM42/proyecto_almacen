@@ -61,9 +61,9 @@
 											<td>{{ $productoTb->fecha_ingreso }}</td>
 
                                             <td>
-                                                <form action="{{ route('producto-tbs.destroy',$productoTb->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('producto-tbs.show',$productoTb->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('producto-tbs.edit',$productoTb->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                <form action="{{ route('producto-tb.destroy',$productoTb->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('producto-tb.show',$productoTb->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('producto-tb.edit',$productoTb->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>

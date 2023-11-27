@@ -56,11 +56,11 @@
 </li>   
 
 <li class="nav-item">
-<a class="nav-link" href="{{route('producto-tb.index')}}"> Productos </a>
+<a class="nav-link" href="{{route('proveedor-tb.index')}}"> Proveedores </a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="{{route('proveedor-tb.index')}}"> Proveedores </a>
+<a class="nav-link" href="{{route('producto-tb.index')}}"> Productos </a>
 </li>
 
 <li class="nav-item">

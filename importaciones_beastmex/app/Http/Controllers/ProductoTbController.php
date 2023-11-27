@@ -47,7 +47,7 @@ class ProductoTbController extends Controller
 
         $productoTb = ProductoTb::create($request->all());
 
-        return redirect()->route('producto-tbs.index')
+        return redirect()->route('producto-tb.index')
             ->with('success', 'ProductoTb created successfully.');
     }
 
@@ -90,7 +90,7 @@ class ProductoTbController extends Controller
 
         $productoTb->update($request->all());
 
-        return redirect()->route('producto-tbs.index')
+        return redirect()->route('producto-tb.index')
             ->with('success', 'ProductoTb updated successfully');
     }
 
@@ -101,9 +101,17 @@ class ProductoTbController extends Controller
      */
     public function destroy($id)
     {
-        $productoTb = ProductoTb::find($id)->delete();
-
-        return redirect()->route('producto-tbs.index')
-            ->with('success', 'ProductoTb deleted successfully');
+        $productoTb = ProductoTb::find($id);
+    
+        if ($productoTb) {
+            $productoTb->delete();
+           
+            return redirect()->route('producto-tb.index')->with('success', 'ProductoTb deleted successfully');
+        } else {
+           
+            return redirect()->route('producto-tb.index')->with('error', 'Producto no encontrado');
+        }
     }
+    
+    
 }
