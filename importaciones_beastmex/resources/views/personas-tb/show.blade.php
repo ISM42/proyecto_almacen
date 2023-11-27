@@ -20,10 +20,7 @@
 
                     <div class="card-body">
                         
-                        <div class="form-group">
-                            <strong>User Id:</strong>
-                            {{ $personasTb->user_id }}
-                        </div>
+                       
                         <div class="form-group">
                             <strong>Nombre:</strong>
                             {{ $personasTb->nombre }}

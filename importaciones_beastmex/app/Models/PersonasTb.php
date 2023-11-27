@@ -27,12 +27,12 @@ class PersonasTb extends Model
 {
     protected $table = 'personas_tb';
     static $rules = [
-		'user_id' => 'required',
+		
 		'nombre' => 'required',
 		'apellido_p' => 'required',
 		'apellido_m' => 'required',
 		'correo' => 'required',
-		'telefono' => 'required',
+		'telefono' => 'required|min: 10 | max: 10',
     ];
 
     protected $perPage = 20;

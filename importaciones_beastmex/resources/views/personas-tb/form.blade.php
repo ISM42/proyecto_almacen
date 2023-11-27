@@ -1,11 +1,13 @@
 <div class="box box-info padding-1">
     <div class="box-body">
         
-        <div class="form-group">
-            {{ Form::label('user_id') }}
-            {{ Form::text('user_id', $personasTb->user_id, ['class' => 'form-control' . ($errors->has('user_id') ? ' is-invalid' : ''), 'placeholder' => 'User Id']) }}
-            {!! $errors->first('user_id', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+    <div class="form-group">
+    {{ Form::label('id', 'Persona ID') }}
+    {{ Form::text('id', null, ['class' => 'form-control' . ($errors->has('id') ? ' is-invalid' : ''), 'placeholder' => 'Persona ID']) }}
+    {!! $errors->first('id', '<div class="invalid-feedback">:message</div>') !!}
+</div>
+
+       
         <div class="form-group">
             {{ Form::label('nombre') }}
             {{ Form::text('nombre', $personasTb->nombre, ['class' => 'form-control' . ($errors->has('nombre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}
@@ -35,5 +37,6 @@
     </div>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+
     </div>
 </div>

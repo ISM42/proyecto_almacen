@@ -36,7 +36,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>User Id</th>
+										
 										<th>Nombre</th>
 										<th>Apellido P</th>
 										<th>Apellido M</th>
@@ -51,7 +51,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $personasTb->user_id }}</td>
+											
 											<td>{{ $personasTb->nombre }}</td>
 											<td>{{ $personasTb->apellido_p }}</td>
 											<td>{{ $personasTb->apellido_m }}</td>

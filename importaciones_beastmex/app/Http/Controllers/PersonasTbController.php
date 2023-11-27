@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\PersonasTb;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 /**
  * Class PersonasTbController
@@ -32,6 +33,7 @@ class PersonasTbController extends Controller
     public function create()
     {
         $personasTb = new PersonasTb();
+       // $users = users::pluck('name','id');
         return view('personas-tb.create', compact('personasTb'));
     }
 
