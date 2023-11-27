@@ -47,7 +47,7 @@ class PersonasTbController extends Controller
 
         $personasTb = PersonasTb::create($request->all());
 
-        return redirect()->route('personas-tbs.index')
+        return redirect()->route('personas-tb.index')
             ->with('success', 'PersonasTb created successfully.');
     }
 
@@ -90,7 +90,7 @@ class PersonasTbController extends Controller
 
         $personasTb->update($request->all());
 
-        return redirect()->route('personas-tbs.index')
+        return redirect()->route('personas-tb.index')
             ->with('success', 'PersonasTb updated successfully');
     }
 
@@ -103,7 +103,7 @@ class PersonasTbController extends Controller
     {
         $personasTb = PersonasTb::find($id)->delete();
 
-        return redirect()->route('personas-tbs.index')
+        return redirect()->route('personas-tb.index')
             ->with('success', 'PersonasTb deleted successfully');
     }
 }
