@@ -51,9 +51,9 @@
 											<td>{{ $proveedorTb->nombre_empresa }}</td>
 
                                             <td>
-                                                <form action="{{ route('proveedor-tbs.destroy',$proveedorTb->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('proveedor-tbs.show',$proveedorTb->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('proveedor-tbs.edit',$proveedorTb->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                <form action="{{ route('proveedor-tb.destroy',$proveedorTb->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('proveedor-tb.show',$proveedorTb->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('proveedor-tb.edit',$proveedorTb->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>

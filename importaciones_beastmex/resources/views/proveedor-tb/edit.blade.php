@@ -16,7 +16,7 @@
                         <span class="card-title">{{ __('Update') }} Proveedor Tb</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('proveedor-tbs.update', $proveedorTb->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('proveedor-tb.update', $proveedorTb->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 

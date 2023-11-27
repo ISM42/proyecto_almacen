@@ -29,11 +29,12 @@ class ProveedorTbController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        $proveedorTb = new ProveedorTb();
-        return view('proveedor-tb.create', compact('proveedorTb'));
-    }
+        public function create()
+        {
+            $proveedorTb = new ProveedorTb();
+           // $personas_tb = PersonasTbController::pluck('nombre','id');
+            return view('proveedor-tb.create', compact('proveedorTb'));
+        }
 
     /**
      * Store a newly created resource in storage.
@@ -47,7 +48,7 @@ class ProveedorTbController extends Controller
 
         $proveedorTb = ProveedorTb::create($request->all());
 
-        return redirect()->route('proveedor-tbs.index')
+        return redirect()->route('proveedor-tb.index')
             ->with('success', 'ProveedorTb created successfully.');
     }
 
@@ -90,7 +91,7 @@ class ProveedorTbController extends Controller
 
         $proveedorTb->update($request->all());
 
-        return redirect()->route('proveedor-tbs.index')
+        return redirect()->route('proveedor-tb.index')
             ->with('success', 'ProveedorTb updated successfully');
     }
 
@@ -101,9 +102,14 @@ class ProveedorTbController extends Controller
      */
     public function destroy($id)
     {
-        $proveedorTb = ProveedorTb::find($id)->delete();
-
-        return redirect()->route('proveedor-tbs.index')
-            ->with('success', 'ProveedorTb deleted successfully');
+        $proveedorTb = ProveedorTb::find($id);
+        if ($proveedorTb) {
+            $proveedorTb->delete();
+            // Resto de tu lógica después de eliminar el proveedor
+            return redirect()->route('proveedor-tb.index');
+        } else {
+            // Manejo de errores si no se encuentra el proveedor
+            return redirect()->route('proveedor-tb.index')->with('error', 'Proveedor no encontrado');
     }
+}
 }

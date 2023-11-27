@@ -33,7 +33,9 @@ class PersonasTbController extends Controller
     public function create()
     {
         $personasTb = new PersonasTb();
-       // $users = users::pluck('name','id');
+        //$proveedorTb = new ProveedorTb();
+       // $personas_tb = PersonasTb::pluck('nombre', 'id');
+       // return view('proveedor-tb.create', compact('proveedorTb', 'personas_tb'));
         return view('personas-tb.create', compact('personasTb'));
     }
 
