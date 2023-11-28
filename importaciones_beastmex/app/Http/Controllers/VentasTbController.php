@@ -47,7 +47,7 @@ class VentasTbController extends Controller
 
         $ventasTb = VentasTb::create($request->all());
 
-        return redirect()->route('ventas-tbs.index')
+        return redirect()->route('ventas-tb.index')
             ->with('success', 'VentasTb created successfully.');
     }
 
@@ -99,11 +99,24 @@ class VentasTbController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
-    public function destroy($id)
+    /*public function destroy($id)
     {
         $ventasTb = VentasTb::find($id)->delete();
 
         return redirect()->route('ventas-tbs.index')
             ->with('success', 'VentasTb deleted successfully');
+    }*/
+
+    public function destroy($ventas_tb)
+{
+    $ventasTb = VentasTb::find($ventas_tb);
+
+    if ($ventasTb) {
+        $ventasTb->delete();
+        return redirect()->route('ventas-tb.index')->with('success', 'VentasTb deleted successfully');
+    } else {
+        return redirect()->route('ventas-tb.index')->with('error', 'VentasTb not found');
     }
+}
+
 }

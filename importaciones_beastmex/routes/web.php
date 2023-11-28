@@ -46,6 +46,9 @@ Route::post('/proveedor', [ProveedorTbController::class, 'store'])->name('provee
 Route::post('/ticket', [TicketTbController::class, 'store'])->name('ticket-tbs.store');
 Route::post('/ventas', [VentasTbController::class, 'store'])->name('ventas-tbs.store');
 
+Route::delete('/ventas-tb/{ventas_tb}', [VentasTbController::class, 'destroy'])->name('ventas-tb.destroy');
+
+
 
 
 //RUTAS PARA CRUD

@@ -47,7 +47,7 @@ class TicketTbController extends Controller
 
         $ticketTb = TicketTb::create($request->all());
 
-        return redirect()->route('ticket-tbs.index')
+        return redirect()->route('ticket-tb.index')
             ->with('success', 'TicketTb created successfully.');
     }
 
@@ -90,7 +90,7 @@ class TicketTbController extends Controller
 
         $ticketTb->update($request->all());
 
-        return redirect()->route('ticket-tbs.index')
+        return redirect()->route('ticket-tb.index')
             ->with('success', 'TicketTb updated successfully');
     }
 
@@ -100,10 +100,15 @@ class TicketTbController extends Controller
      * @throws \Exception
      */
     public function destroy($id)
-    {
-        $ticketTb = TicketTb::find($id)->delete();
+{
+    $ticketTb = TicketTb::find($id);
 
-        return redirect()->route('ticket-tbs.index')
-            ->with('success', 'TicketTb deleted successfully');
+    if ($ticketTb) {
+        $ticketTb->delete();
+        return redirect()->route('ticket-tb.index')->with('success', 'TicketTb deleted successfully');
+    } else {
+        return redirect()->route('ticket-tb.index')->with('error', 'TicketTb not found');
     }
+}
+
 }

@@ -16,7 +16,7 @@
                         <span class="card-title">{{ __('Update') }} Ticket Tb</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('ticket-tbs.update', $ticketTb->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('ticket-tb.update', $ticketTb->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 

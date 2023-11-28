@@ -57,5 +57,10 @@ class VentasTb extends Model
         return $this->hasMany('App\Models\TicketTb', 'venta_id', 'venta_id');
     }
     
+    public function getRouteKeyName()
+{
+    return 'id'; // O el nombre de la columna de la clave primaria si es diferente a 'id'
+}
+
 
 }

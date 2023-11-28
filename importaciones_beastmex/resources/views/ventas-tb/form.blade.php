@@ -22,10 +22,11 @@
             {!! $errors->first('precio_venta', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('fecha') }}
-            {{ Form::text('fecha', $ventasTb->fecha, ['class' => 'form-control' . ($errors->has('fecha') ? ' is-invalid' : ''), 'placeholder' => 'Fecha']) }}
-            {!! $errors->first('fecha', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+    {{ Form::label('fecha') }}
+    {{ Form::date('fecha', $ventasTb->fecha, ['class' => 'form-control' . ($errors->has('fecha') ? ' is-invalid' : ''), 'placeholder' => 'Fecha']) }}
+    {!! $errors->first('fecha', '<div class="invalid-feedback">:message</div>') !!}
+</div>
+
 
     </div>
     <div class="box-footer mt20">
