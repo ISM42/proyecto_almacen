@@ -34,6 +34,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/personas/create', [PersonasTbController::class, 'create'])->name('personas-tbs.create');
 Route::get('/compras/create', [ComprasTbController::class,'create'])->name('compras-tbs.create');
 Route::get('/producto/create', [ProductoTbController::class,'create'])->name('producto-tbs.create');
+Route::get('/reporte/generate', [pdfController::class,'generate'])->name('reporte.generate'); 
 Route::get('/proveedor/create', [ProveedorTbController::class,'create'])->name('proveedor-tbs.create');
 Route::get('/ticket/create', [TicketTbController::class,'create'])->name('ticket-tbs.create');
 Route::get('/ventas/create', [VentasTbController::class,'create'])->name('ventas-tbs.create');
